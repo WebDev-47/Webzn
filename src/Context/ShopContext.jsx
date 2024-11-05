@@ -11,9 +11,9 @@ const ShopContextProvider = (props) => {
   const [showSearch, setShowSearch] = useState(false);
   const [cartItems, setCartItems] = useState({});
 
-  const addToCart = async (itemId, size) => {
+  const addToCart = async (itemId,size) => {
     if (!size) {
-      toast.error(" Please, Select Product Size");
+      toast.error(" Select Product Size");
       return;
     }
 
@@ -22,10 +22,12 @@ const ShopContextProvider = (props) => {
     if (cartData[itemId]) {
       if (cartData[itemId][size]) {
         cartData[itemId][size] += 1;
-      } else {
+      } 
+      else {
         cartData[itemId][size] = 1;
       }
-    } else {
+    } 
+    else {
       cartData[itemId] = {};
       cartData[itemId][size] = 1;
     }
@@ -50,21 +52,14 @@ const ShopContextProvider = (props) => {
     return totalCount;
   }
 
-  //         useEffect(()=>{
-  // console.log(cartItems)
-  //         },[cartItems])
+          useEffect(()=>{
+  console.log(cartItems)
+          },[cartItems])
 
   const value = {
-    products,
-    currency,
-    delivery_fee,
-    search,
-    setSearch,
-    showSearch,
-    setShowSearch,
-    cartItems,
-    addToCart,
-    getCartCount
+    products, currency, delivery_fee, search,
+    setSearch, showSearch, setShowSearch, cartItems,
+    addToCart, getCartCount
   };
 
   return (
