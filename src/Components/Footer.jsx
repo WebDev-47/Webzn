@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom'
 
 const Footer = () => {
   return (
-    <div className=' p-4'>
-        <div className=' flex flex-col sm:grid grid-cols-[3fr_1fr_1fr] gap-14 my-10 mt-40 text-sm sticky'>
+    <div className=' p-4 bg-gradient-to-b from-gray-50 to-pink-200 mt-[10rem] '>
+        <div className=' flex flex-col sm:grid grid-cols-[3fr_1fr_1fr] gap-14 my-10 mt-5 text-sm '>
 
             <div>
                 <img src={assets.logo} className=' mb-5 w-32' alt="" />
